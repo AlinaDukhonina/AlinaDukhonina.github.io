@@ -101,6 +101,7 @@ a{
     margin-left: 5%;
     background-color: darkgray;
     color: white;
+    margin-bottom: 10px;
 }
 
 .winbut:hover{
@@ -110,6 +111,41 @@ a{
     margin-left: 5%;
     background-color: rgb(64, 64, 64);
     color: rgb(189, 189, 189);
+}
+
+
+#bodyy{
+    min-height: 100svh;
+    font-family: system-ui;
+    margin: 0;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+#back{
+  --color: black /*rgb(102, 51, 153)*/;
+  
+  position: relative;
+  height: 100svh;
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+  background-color: white;
+  background-image: linear-gradient(var(--angle), white 50%, var(--color) 50%);
+  animation: bg-rotate 10000ms linear infinite;
+}
+
+@keyframes bg-rotate {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
 
 
